@@ -32,6 +32,12 @@ body {
     padding: 1em;
 }
 
+h2 {
+    font-size: 2em;
+    line-height: 100%;
+    font-weight: 600;
+}
+
 h3 {
     font-size: 1.5em;
     line-height: 125%;
@@ -127,7 +133,7 @@ h3 {
 }
 
 input{
-    width: clamp(320px,100%,400px); 
+    width: clamp(240px,100%,320px); 
     border: none;
     background-color: #e7e7e7;
     padding: 0.25em 0.5em;
@@ -195,16 +201,23 @@ button#notifications {
     gap: 0.25em;
 }
 
-#main{ 
-    grid-column: 2 / 3;
+#content{ 
+    display: grid;
+    grid-template-columns: 3fr 1fr;
+    gap: 2em;
+    padding: 1em;
 }
 
 #project-cards {
-
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
+    gap: 0.5em;
 }
 
 #card {
-
+    background-color: #ffffff;
+    padding: 1em;
+    border-radius: 0.5em;
 }
 
 #announcements {
