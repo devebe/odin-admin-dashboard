@@ -35,6 +35,7 @@ body {
 #main {
     display: grid;
     grid-template-rows: auto auto 1fr;
+    margin-right: 1em;
 }
 
 #logo {
@@ -50,6 +51,13 @@ body {
     width: 24px;
 }
 
+.avatar {
+    height: 32px;
+    width: 32px;
+    border-radius: 16px;
+    object-fit: cover;
+}
+
 .link {
     padding: 0.5em;
     border-radius: 4px;
@@ -62,8 +70,8 @@ body {
 #toolbar{
     padding: 1em;
     display: grid;
-    grid-template-columns: 1fr auto;
-    gap: 0.25em;
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+    gap: 2em;
     align-items: center;
 }
 
@@ -81,11 +89,33 @@ body {
 }
 
 #header{ 
+    background-color: #e3f7df;
+    padding: 1em;
+    border-radius: 4px;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+    align-items: end;
+    gap: 1em;
+}
 
+#header-actions{
+    display: grid;
+    grid-template-columns: repeat(3, auto);
+    gap: 1em;
+    align-items: center;
+    justify-items: start;
+    justify-self: end;
+}
+
+.profile-img{
+    width: 80px;
+    height: 80px;
+    object-fit: cover;
+    border-radius: 40px;
 }
 
 input{
-    width: min(100%,480px); 
+    width: clamp(320px,100%,480px); 
     border: none;
     background-color: #e7e7e7;
     padding: 0.25em 0.5em;
@@ -94,19 +124,24 @@ input{
     border-radius: 4px;
 }
 
-button#search {
+button {
+    display: flex;
+    flex-direction: row;
+    gap: 4px;
     padding: 0.375em;
     background-color: #f7f7f7;
+    color: #1757e7;
     height: 36px;
     border: none;
     border-radius: 4px;
     box-shadow: none;
+    align-items: center;
 }
 
-button#search:hover{
-    /* border: 2px solid #1757E7; */
-    background-color: #d0ddfc;
-    padding: 0.375em;
+button:hover{
+    background-color: #e2ebff;
+    padding: 0.3125rem;
+    border: 1px solid #1757e7;
     cursor: pointer;
 }
 
@@ -115,7 +150,13 @@ button > .icon {
 }
 
 button#avatar {
+    padding: 0.125em;
+    border-radius: 18px;
+}
 
+button#avatar:hover {
+    padding: 0;
+    border: 2px solid #1757e7;
 }
 
 button#notifications {
@@ -123,7 +164,8 @@ button#notifications {
 }
 
 #header-textcontent {
-
+    display: grid;
+    grid-template-columns: auto, 1fr;
 }
 
 .stack {
