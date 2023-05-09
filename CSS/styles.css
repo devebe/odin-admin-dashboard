@@ -262,6 +262,7 @@ button.header:hover {
 
 #card > p {
     place-self: start start;
+    color:#575757;
 }
 
 #metrics{
@@ -300,20 +301,20 @@ button.header:hover {
 
 #main-side {
     display: grid;
-    grid-template-rows: 1fr 1fr;
+    grid-template-rows: min-content min-content;
     gap: 2em;
 }
 
 #announcements, #trending {
     display: grid;
-    grid-template-rows: auto 1fr;
+    grid-template-rows: min-content min-content;
     gap: 1em;
 }
 
 #messages {
     padding: 1em;
     display: grid;
-    grid-template-rows: auto auto auto;
+    grid-template-rows: repeat(3, min-content);
     gap: 1em;
     border-radius: 0.5em;
     border: 1px solid #d7d7d7;
@@ -328,6 +329,17 @@ button.header:hover {
 #message:last-child {
     padding-bottom: 0;
     border-bottom: none;
+}
+
+#message > .stack > p {
+    font-size: 0.875em;
+    color: #575757;
+}
+
+#message > .stack > h6:hover {
+    color:#1757E7;
+    text-decoration: underline;
+    cursor: pointer;
 }
 
 #project-highlight {
