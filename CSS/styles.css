@@ -225,14 +225,14 @@ button.header:hover {
 
 #project-cards {
     display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
+    grid-template-columns: repeat(auto-fill, minmax(264px, 1fr));
     grid-template-rows: 1fr 1fr 1fr;
     gap: 1em;
 }
 
 #card {
     background-color: #ffffff;
-    width: clamp(280px, 100%, 320px);
+    width: clamp(264px, 100%, 344px);
     padding: 1em;
     border-radius: 0.5em;
     border: 1px solid #d7d7d7;
@@ -244,12 +244,19 @@ button.header:hover {
 
 #card:hover {
     box-shadow: 0 8px 1em #d7d7d780;
+    border: 1px solid #a7a7a7;
     transition: 0.5s;
 }
 
-#card:hover > h4 {
+#card > h4:hover {
     color: #1757e7;
     text-decoration: underline;
+    cursor: pointer;
+}
+
+#card > p {
+    margin-top: 0.5em;
+    margin-bottom: 1em;
 }
 
 #metrics{
@@ -266,6 +273,7 @@ button.header:hover {
 #metrics > li:hover {
     text-decoration: underline;
     color: #575757;
+    cursor: pointer;
 }
 
 #card-actions {
