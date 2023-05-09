@@ -23,9 +23,9 @@ body {
 }
 
 #navigation {
-    display: flex;
-    flex-direction: column;
-    gap: 1em;
+    display: grid;
+    grid-template-rows: repeat(3, min-content);
+    gap: 2em;
     color: #f7f7f7;
     background-color: #575757;
     height: 100vh;
@@ -50,7 +50,6 @@ h4 {
     font-size: 1.125em;
     line-height: 125%;
     font-weight: 600;
-    height: 22.5px;
 }
 
 h5 {
@@ -254,14 +253,13 @@ button.header:hover {
     transition: 0.5s;
 }
 
-#card > h4:hover {
+h4:hover {
     color: #1757e7;
     text-decoration: underline;
     cursor: pointer;
 }
 
 #card > p {
-    place-self: start start;
     color:#575757;
 }
 
@@ -315,18 +313,19 @@ button.header:hover {
     padding: 1em;
     display: grid;
     grid-template-rows: repeat(3, min-content);
+    grid-auto-rows: min-content;
     gap: 1em;
     border-radius: 0.5em;
     border: 1px solid #d7d7d7;
     background-color: #ffffff;
 }
 
-#message {
+#message, #project-highlight {
     padding-bottom: 1em;
     border-bottom: 1px solid #a7a7a7;
 }
 
-#message:last-child {
+#message:last-child, #project-highlight:last-child {
     padding-bottom: 0;
     border-bottom: none;
 }
@@ -343,7 +342,16 @@ button.header:hover {
 }
 
 #project-highlight {
+    display: grid;
+    grid-template-columns: auto 1fr;
+    grid-template-rows: auto;
+    align-items: center;
+    gap: 1em;
+}
 
+#project-highlight > .profile-img {
+    height: 40px;
+    width: 40px;
 }
 
 .user-handle {
