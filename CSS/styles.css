@@ -58,6 +58,10 @@ h5 {
     color: #575757;
 }
 
+h6 {
+    font-weight: 600;
+}
+
 #main {
     display: grid;
     grid-template-rows: auto auto 1fr;
@@ -214,20 +218,20 @@ button.header:hover {
 #content{ 
     display: grid;
     grid-template-columns: 3fr 1fr;
-    gap: 2em;
+    gap: 3em;
     padding: 2em 1em;
 }
 
 #projects {
     display: grid;
-    grid-template-rows: auto 1fr;
+    grid-template-rows: auto 1fr auto;
     gap: 1em;
 }
 
 #project-cards {
     display: grid;
     grid-template-columns: repeat(auto-fill, minmax(264px, 1fr));
-    grid-template-rows: auto auto auto;
+    grid-auto-rows: min-content;
     gap: 1em;
 }
 
@@ -239,7 +243,7 @@ button.header:hover {
     border: 1px solid #d7d7d7;
     transition: 0.2s;
     display: grid;
-    grid-template-rows: auto auto auto auto auto;
+    grid-template-rows: repeat(4, min-content) auto;
     gap: 0.5em;
     place-items: start start;
 }
@@ -257,16 +261,14 @@ button.header:hover {
 }
 
 #card > p {
-    margin-top: 0.5em;
-    margin-bottom: 1em;
     place-self: start start;
 }
 
 #metrics{
     display: grid;
     justify-self: stretch;
-    grid-template-columns: repeat(auto-fill, minmax(72px,1fr));
-    gap: 0.5em;
+    grid-template-columns: repeat(auto-fill, minmax(64px,1fr));
+    gap: 1em;
 }
 
 #metrics > li {
@@ -296,16 +298,36 @@ button.header:hover {
     background-color: #e2ebff;
 }
 
-#announcements {
+#main-side {
+    display: grid;
+    grid-template-rows: 1fr 1fr;
+    gap: 2em;
+}
 
+#announcements, #trending {
+    display: grid;
+    grid-template-rows: auto 1fr;
+    gap: 1em;
+}
+
+#messages {
+    padding: 1em;
+    display: grid;
+    grid-template-rows: auto auto auto;
+    gap: 1em;
+    border-radius: 0.5em;
+    border: 1px solid #d7d7d7;
+    background-color: #ffffff;
 }
 
 #message {
-
+    padding-bottom: 1em;
+    border-bottom: 1px solid #a7a7a7;
 }
 
-#trending {
-
+#message:last-child {
+    padding-bottom: 0;
+    border-bottom: none;
 }
 
 #project-highlight {
