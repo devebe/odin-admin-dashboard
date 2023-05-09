@@ -226,7 +226,7 @@ button.header:hover {
 #project-cards {
     display: grid;
     grid-template-columns: repeat(auto-fill, minmax(264px, 1fr));
-    grid-template-rows: 1fr 1fr 1fr;
+    grid-template-rows: repeat(auto);
     gap: 1em;
 }
 
@@ -237,8 +237,8 @@ button.header:hover {
     border-radius: 0.5em;
     border: 1px solid #d7d7d7;
     transition: 0.2s;
-    display: flex;
-    flex-direction: column;
+    display: grid;
+    grid-template-rows: auto auto auto 1fr auto;
     gap: 0.5em;
 }
 
@@ -279,7 +279,7 @@ button.header:hover {
 #card-actions {
     display: grid;
     grid-template-columns: repeat(3, auto) 1fr;
-    align-self: end;
+    justify-self: end;
     gap: 0.5em;
     margin-right: -0.5em;
 }
