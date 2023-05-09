@@ -227,6 +227,16 @@ button.header:hover {
     background-color: #ffffff;
     padding: 1em;
     border-radius: 0.5em;
+    border: 1px solid #d7d7d7;
+}
+
+#card:hover {
+    border: 1px solid #1757e7;
+}
+
+#card:hover > h4 {
+    color: #1757e7;
+    text-decoration: underline;
 }
 
 #announcements {
