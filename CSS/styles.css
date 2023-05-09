@@ -44,6 +44,17 @@ h3 {
     font-weight: 600;
 }
 
+h4 {
+    font-size: 1.125em;
+    line-height: 125%;
+    font-weight: 600;
+}
+
+h5 {
+    font-size: 0.75em;
+    color: #575757;
+}
+
 #main {
     display: grid;
     grid-template-rows: auto auto 1fr;
@@ -57,10 +68,6 @@ h3 {
     margin-left: 0.5em;
     padding: 0.375em 0;
     font-weight: 600;
-}
-
-#app-pages, #config-pages {
-
 }
 
 .icon {
@@ -185,10 +192,6 @@ button.header:hover {
     padding-right: 11px;
 }
 
-button#notifications {
-
-}
-
 #header-textcontent {
     display: grid;
     grid-template-columns: auto 1fr;
@@ -205,12 +208,18 @@ button#notifications {
     display: grid;
     grid-template-columns: 3fr 1fr;
     gap: 2em;
-    padding: 1em;
+    padding: 2em 1em;
+}
+
+#projects {
+    display: grid;
+    grid-template-rows: auto 1fr;
+    gap: 1em;
 }
 
 #project-cards {
     display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
     gap: 0.5em;
 }
 
