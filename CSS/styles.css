@@ -89,6 +89,7 @@ h5 {
 
 .link:hover {
     background-color: #171717;
+    text-decoration: underline;
 }
 
 #toolbar{
@@ -220,7 +221,7 @@ button.header:hover {
 #project-cards {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
-    gap: 0.5em;
+    gap: 1em;
 }
 
 #card {
@@ -228,15 +229,36 @@ button.header:hover {
     padding: 1em;
     border-radius: 0.5em;
     border: 1px solid #d7d7d7;
+    transition: 0.2s;
+    display: flex;
+    flex-direction: column;
+    gap: 0.5em;
 }
 
 #card:hover {
-    border: 1px solid #1757e7;
+    box-shadow: 0 8px 1em #d7d7d780;
+    transform: translateY(-0.125em);
+    transition: 0.5s;
 }
 
 #card:hover > h4 {
     color: #1757e7;
     text-decoration: underline;
+}
+
+#metrics{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 0.5em;
+}
+
+#metrics > li {
+    font-size: 0.75em;
+}
+
+#metrics > li:hover {
+    text-decoration: underline;
+    color: #575757;
 }
 
 #announcements {
